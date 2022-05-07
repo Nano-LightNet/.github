@@ -24,5 +24,5 @@
 | Sender | Network | Message Type | Body | Extensions |
 |   --   |   ---   |      --      |  --  |     --     |
 | Client (Light Node) | Nano/Native | NodeIDHandshake (0x0a) | { Cookie } | 0x8001
-| Server | Nano/Native | NodeIDHandshake | { Regular Cookie, { NodeID, Signature } } | 0x0003
-| Client (Light Node) | Nano/Native | NodeIDHandshake | { { NodeID, Signature } } | 0x0002
+| Server | Nano/Native | NodeIDHandshake (0x0a) | { Regular Cookie, { NodeID, Signature } } | 0x0003
+| Client (Light Node) | Nano/Native | NodeIDHandshake (0x0a) | { { NodeID, Signature } } | 0x0002
