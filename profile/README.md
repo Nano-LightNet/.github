@@ -19,9 +19,10 @@
 
 # Example of Light Node connecting to Nano Node
 #### Light Cookie = 30 Random Bytes
+#### Regular Cookie = 32 Random Bytes
 #### Cookie = Light Net Protocol Version + Minimum Light Net Protocol Version + Light Cookie
 | Sender | Network | Message Type | Body | Extensions |
 |   --   |   ---   |      --      |  --  |     --     |
 | Client (Light Node) | Nano/Native | NodeIDHandshake (0x0a) | { Cookie } | 0x8001
-| Server | Nano/Native | NodeIDHandshake | { Cookie, { NodeID, Signature } } | 0x0003
+| Server | Nano/Native | NodeIDHandshake | { Regular Cookie, { NodeID, Signature } } | 0x0003
 | Client (Light Node) | Nano/Native | NodeIDHandshake | { { NodeID, Signature } } | 0x0002
