@@ -6,6 +6,8 @@
 # Example of Network Upgrade
 #### Light Cookie = 30 Random Bytes
 #### Cookie = Light Net Protocol Version + Minimum Light Net Protocol Version + Light Cookie
+#### NodeSharedSecret = ECDH(NodeID, NodeSecret)
+#### Message Signature = keyedHash({ NodeSharedSecret, Cookie }, { Message Type (u1), Extensions (u2le), Height (u8be), Message Body })
 | Sender | Network | Message Type | Body | Extensions |
 |   --   |   ---   |      --      |  --  |     --     |
 | Client (Light Node) | Nano/Native | NodeIDHandshake (0x0a) | { Cookie } | 0x8001
